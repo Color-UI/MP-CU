@@ -1,5 +1,5 @@
-# mp-weixin Beta V3.2 测试版
+# mp-weixin Beta V3.2 适配中...
 
 colorui 微信小程序原生版
 
-测试。。。
+开发，适配中...

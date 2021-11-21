@@ -1,0 +1,15 @@
+// 数字格式化
+numberFormat = function (Num) {
+    if (Num > 1000 && Num < 10000) {
+        return Math.floor(Num / 1000) + 'k';
+    } else if (Num > 10000) {
+        return Math.floor(Num / 10000) + 'W';
+    } else {
+        return Num;
+    }
+}
+
+
+module.exports = {
+    numberFormat: numberFormat
+}

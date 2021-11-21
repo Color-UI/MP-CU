@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "ui-navbar": "/MP-CU/colorui/components/ui-navbar/ui-navbar",
+        "ui-swiper": "/MP-CU/colorui/components/ui-swiper/ui-swiper",
+        "app-nav-li": "/MP-CU/app/components/app-nav-li/app-nav-li"
+    }
+}

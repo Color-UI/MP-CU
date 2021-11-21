@@ -1,0 +1,37 @@
+<ui-fixed noNav placeholder="{{placeholder}}" bg="{{bg}}" ui="{{ui}}" noFixed="{{noFixed}}"
+          zIndex='1000' val="0" opacity="{{opacity}}" opacityVal="{{opacityVal}}" bindtap="clickItem">
+    <view class="ui-navbar-box {{!opacity&&bg!=='bg-none'?'border-bottom':''}}"
+          style="{{'padding-top:'+sys_statusBar+'px;'}} {{'height: '+sys_navBar+'px'}}">
+        <view class="ui-bar {{status===''?'text-a':status==='light'?'text-white':'text-black'}}"
+              style="{{'height:'+(sys_navBar-sys_statusBar)+'px'}}">
+            <block wx:if="{{isSlot}}"> <slot/> </block>
+            <block wx:else>
+                <view class="left">
+                    <view class="back" wx:if="{{back && !capsule}}">
+                        <view class="back-icon icon-fw text-xl {{isFristPage?'_icon-home-o':'_icon-back'}} {{statusCur}} {{opacityBg?opacityIcon:''}}"/>
+                        <view>{{ backtext }}</view>
+                    </view>
+                    <view class="capsule {{isFristPage?'isFristPage':''}} {{statusCur}}" style="" wx:if="{{capsule}}">
+                        <view class="capsule-back">
+                            <text class="icon-fw text-xl _icon-back"/>
+                        </view>
+                        <view class="capsule-home">
+                            <text class="icon-fw text-xl {{isFristPage?'_icon-home':'_icon-home-o'}}"/>
+                        </view>
+                    </view>
+                    <slot name="left"/>
+                </view>
+                <view class="center" wx:if="{{isCenter}}">
+                    <slot name="center"/>
+                </view>
+                <view class="right" wx:if="{{isCenter && !isRight}}"/>
+                <view class="right" wx:if="{{isRight}}">
+                    <view class="right-content">
+                        <slot name="right"/>
+                    </view>
+                    <view style="{{capsuleStyle}}"/>
+                </view>
+            </block>
+        </view>
+    </view>
+</ui-fixed>

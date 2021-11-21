@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ui-fixed": "/MP-CU/colorui/components/ui-fixed/ui-fixed"
+  }
+}

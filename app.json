@@ -1,0 +1,33 @@
+{
+    "pages":[
+        "pages/document/home",
+        "pages/template/home",
+        "pages/community/home",
+        "pages/find/home",
+        "pages/my/home"
+    ],
+    "window":{
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "MP-CU (ColorUI)",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+
+    "usingComponents": {
+        "ui-sys": "MP-CU/colorui/components/ui-sys/ui-sys",
+        "ui-title": "MP-CU/colorui/components/ui-title/ui-title"
+    },
+    "tabBar": {
+        "custom": true,
+        "list": [{
+            "pagePath": "pages/document/home",
+            "text": "首页"
+        },{
+            "pagePath": "pages/template/home",
+            "text": "其他"
+        }]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,4 @@
+<view class="text-center py-4">
+    <image src="/static/img/pa1m9.png" mode="aspectFill" class="page-footer"/>
+    <view class="text-sm pl-5 pr-5 mt-1 text-gray">MP CU是专为colorUI新版组件库，适配原生小程序的版本，本项目取得了原作者的同意。</view>
+</view>

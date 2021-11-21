@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "app-footer": "/MP-CU/colorui/components/app-footer/app-footer",
+    "ui-tabbar": "/MP-CU/colorui/components/ui-tabbar/ui-tabbar"
+  }
+}

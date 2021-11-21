@@ -1,0 +1,13 @@
+<view class="ui-fixed">
+    <view class="ui-fixed-box {{fixed?'fixed':''}}"
+          style="{{sticky?'left:auto;':'left:0px;'}} {{fixed&&!bottom?'top:'+(noNav?val:val+navBar) + 'px;':'top:auto;'}} {{fixed && bottom?'bottom:' + val + 'px;':'bottom:auto;'}} {{zIndex?'z-index:'+ zIndex:''}}">
+        <view class="ui-fixed-content" style="{{zIndex?'z-index:'+ zIndex:''}}">
+            <slot />
+        </view>
+        <view class="ui-fixed-bottom {{bg}}" wx:if="{{bottom && !noSafe}}"/>
+        <view class="ui-fixed-bg {{ui}} {{bg}}"
+              style="{{zIndex?'z-index:'+(zIndex-1)+';':''}} {{bg==='bg-img'?'background-image: url('+img+');':''}} {{opacity?'opacity:'+opacityVal:''}}"/>
+    </view>
+    <view class="skeleton" style="{{'padding-top:'+sys_statusBar+'px;'}} {{'height: '+sys_navBar+'px'}} {{width?'width:' + width + 'px;':''}}"
+          wx:if="{{sticky?fixed:placeholder&&fixed}}"/>
+</view>

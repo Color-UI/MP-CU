@@ -1,0 +1,14 @@
+<view class="ui-page {{theme?'theme-' + theme:''}} {{main?'main-' + main:''}} {{fonts?'font-' + fonts:''}}">
+    <view class="page-body {{bg}} {{ui}}" style="{{styles}}">
+        <view class="page-body-main">
+            <slot/>
+            <app-footer wx:if="{{footer}}"/>
+            <ui-tabbar ui="shadow border-top" datas="{{tabbarData}}" wx:if="{{tabbar}}"/>
+            <view class="loading-body bg-blur" wx:if="{{isLoading}}">
+                <view class="_icon-loading icon-spin text-sl mb-3"/>
+                <view>加载中</view>
+            </view>
+        </view>
+        <image src="{{img}}" mode="aspectFill" class="page-img" wx:if="{{img}}"/>
+    </view>
+</view>

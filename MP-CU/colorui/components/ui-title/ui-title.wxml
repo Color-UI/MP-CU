@@ -1,0 +1,27 @@
+<view class="ui-title {{ui}} {{align}} {{tpl}} {{bg}} {{inLine?'line':''}} {{depth>0?'heading-title heading-'+depth:''}}">
+    <view class="anchor" id="title"/>
+    <view class="action {{hasLine?'hasLine':''}} {{hasDot?'hasDot':''}}">
+        <view class="action-icon">
+            <block wx:if="{{isIcon}}">
+                <view class="ui-TC-Main _icon-titles" wx:if="{{depth<3}}"/>
+                <view class="ui-TC-Main _icon-title" wx:if="{{depth==3}}"/>
+                <view class="ui-TC-Main _icon-title icon-sm" wx:if="{{depth>3}}"/>
+            </block>
+            <slot name="icon"/>
+        </view>
+        <view class="action-title {{text}}" wx:if="{{title!=''}}">
+            <text>{{ title }}</text>
+            <slot></slot>
+            <view class="action-line {{line}}" wx:if="{{hasLine}}">
+                <view></view>
+                <view></view>
+            </view>
+            <view class="action-dot {{dot}}" wx:if="{{hasDot}}">
+                <view></view>
+                <view></view>
+            </view>
+        </view>
+        <view class="action-desc {{desc}}" wx:if="{{desc!=''}}">{{ subTitle }}</view>
+    </view>
+    <view class="more"><slot name="more"/></view>
+</view>

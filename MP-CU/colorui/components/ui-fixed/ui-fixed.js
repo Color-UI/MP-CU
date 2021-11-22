@@ -3,8 +3,8 @@ const app = getApp();
 Component({
     data: {
         fixed: true,
-        sys_statusBar: app.config.sys_statusBar,
-        sys_navBar: app.config.sys_navBar
+        sys_statusBar: app.cu_config.sys_statusBar,
+        sys_navBar: app.cu_config.sys_navBar
     },
     options: {
         addGlobalClass: true

@@ -1,5 +1,5 @@
-const config = require('/MP-CU/app/config/index');
-const tools = require('/MP-CU/utils/tools');
+const mp_cu_config = require('/MP-CU/app/config/index');
+const mp_cu_tools = require('/MP-CU/utils/tools');
 
 App({
     onLaunch(query) {
@@ -8,6 +8,6 @@ App({
     onShow() {
 
     },
-    config: config,
-    tools: tools,
+    cu_config: mp_cu_config,
+    cu_tools: mp_cu_tools,
 })

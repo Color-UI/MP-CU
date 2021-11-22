@@ -13,7 +13,6 @@
         "navigationBarTextStyle": "black",
         "navigationStyle": "custom"
     },
-
     "usingComponents": {
         "ui-sys": "MP-CU/colorui/components/ui-sys/ui-sys",
         "ui-title": "MP-CU/colorui/components/ui-title/ui-title"

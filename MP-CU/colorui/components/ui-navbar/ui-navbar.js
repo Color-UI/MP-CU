@@ -6,8 +6,8 @@ Component({
         capsuleStyle: {},
         capsuleBack: {},
         opacityVal: 0,
-        sys_statusBar: app.config.sys_statusBar,
-        sys_navBar: app.config.sys_navBar,
+        sys_statusBar: app.cu_config.sys_statusBar,
+        sys_navBar: app.cu_config.sys_navBar,
         isFristPage: true
     },
     options: {
@@ -108,7 +108,7 @@ Component({
         },
         attached() {
             this.setData({
-                isFristPage: app.tools.sys_isFirstPage()
+                isFristPage: app.cu_tools.sys_isFirstPage()
             });
         },
         ready() {

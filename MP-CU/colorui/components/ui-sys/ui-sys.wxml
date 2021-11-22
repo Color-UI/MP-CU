@@ -2,7 +2,7 @@
     <view class="page-body {{bg}} {{ui}}" style="{{styles}}">
         <view class="page-body-main">
             <slot/>
-            <app-footer wx:if="{{footer}}"/>
+            <app-footer wx:if="{{app_footer}}"/>
             <ui-tabbar ui="shadow border-top" datas="{{tabbarData}}" wx:if="{{tabbar}}"/>
             <view class="loading-body bg-blur" wx:if="{{isLoading}}">
                 <view class="_icon-loading icon-spin text-sl mb-3"/>

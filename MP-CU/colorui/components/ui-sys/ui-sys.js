@@ -1,6 +1,9 @@
+const app = getApp();
+
 Component({
     data: {
-        isLoading: false
+        isLoading: false,
+		app_footer: app.cu_config.app_footer,
     },
     options: {
         // 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面；
@@ -48,10 +51,6 @@ Component({
         title: {
             type: String,
             value: ''
-        },
-        footer: {
-            type: Boolean,
-            value: true
         },
         tabbar: {
             type: Boolean,

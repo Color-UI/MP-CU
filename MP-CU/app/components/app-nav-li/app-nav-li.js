@@ -17,7 +17,7 @@ Component({
     lifetimes: {
         attached() {
             this.setData({
-                colorName: app.tools.getColor()
+                colorName: app.cu_tools.getColor()
             });
         }
     },

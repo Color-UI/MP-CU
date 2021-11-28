@@ -1,11 +1,13 @@
 //引入框架的方法函数库
-import colorUI from '/mp-cu/ui'
+import ColorUI from './mp-cu/ui'
+var ColorUi = new ColorUI({ // 此处可以配置相关
+    theme  : 'dark'
+})
 
-App({
-    colorUI: colorUI,   //挂载到app上
-    //小程序启动
-    onLaunch(query) {
-
+App({  
+    ColorUi,        //挂载到app上
+    onLaunch() {
+        ColorUi.setStore()
     },
     onShow() {
 

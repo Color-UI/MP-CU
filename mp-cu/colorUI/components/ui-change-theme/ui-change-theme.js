@@ -30,6 +30,7 @@ Component({
     },
     methods: {
         tapThemeChange(e) {
+            console.log(e.currentTarget.dataset.value)
             this.setTheme(e.currentTarget.dataset.value);
         },
         /*chooseColor(val) {

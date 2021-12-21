@@ -1,7 +1,0 @@
-<ui-sys doc title="容器">
-    <view class="ui-container">
-        <!-- 简介 -->
-        <ui-title title="简介" depth="2" isIcon/>
-        <view class="paragraph">容器</view>
-    </view>
-</ui-sys>

@@ -1,3 +1,0 @@
-<view class="ui-form border-top border-bottom {{ui}}">
-    <slot></slot>
-</view>

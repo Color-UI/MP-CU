@@ -1,7 +1,0 @@
-<ui-sys doc title="《英雄联盟》头像素材">
-    <view class="ui-grid ui-cols-5 p-1">
-        <view class="p-1 ui-item text-center" wx:for="{{100}}" wx:key="index">
-            <image class="w-100 block radius" src="https://cos.color-ui.com/avatar/lol-avatar/{{1000 + index + 1}}.jpg" mode="widthFix" lazy-load/>
-        </view>
-    </view>
-</ui-sys>

@@ -1,7 +1,0 @@
-<ui-sys doc title="壁纸">
-    <view class="p-3 ui-grid ui-cols-2">
-        <view class="p-3 ui-item" wx:for="{{list}}" wx:key="index">
-            <ui-img preview ui="radius border" src="{{item}}" urls="{{list}}" current="{{index}}"/>
-        </view>
-    </view>
-</ui-sys>

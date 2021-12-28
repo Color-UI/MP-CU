@@ -11,14 +11,14 @@ module.exports = {
         }
         return capsule;
     },
-    //数组操作
+    // 数组操作
     isArr: {
         //数组中是否存在
         ifItemKey(arr, item) {
             return arr.indexOf(item) !== -1;
         },
         //获取数组索引
-        getItemIndex(arr,item) {
+        getItemIndex(arr, item) {
             return arr.indexOf(item);
         },
         //移除数组中指定元素
@@ -66,8 +66,8 @@ module.exports = {
             return [...items];
         },
         //数组中是否存在
-        ifKey(arr, keyName ,key) {
-            for (let i = 0; i< arr.length; i++) {
+        ifKey(arr, keyName, key) {
+            for (let i = 0; i < arr.length; i++) {
                 if (arr[i][keyName] === key) {
                     return true;
                 }
@@ -76,7 +76,7 @@ module.exports = {
         },
         //获取数组索引
         getIndex(arr, keyName, key) {
-            for (let i = 0; i< arr.length; i++) {
+            for (let i = 0; i < arr.length; i++) {
                 if (arr[i][keyName] === key) {
                     return i;
                 }
@@ -86,7 +86,7 @@ module.exports = {
         //移除数组中指定元素
         del(arr, keyName, key) {
             let s = false, name = '', ArrData = [];
-            for (let i = 0; i< arr.length; i++) {
+            for (let i = 0; i < arr.length; i++) {
                 if (arr[i][keyName] !== key) {
                     if (!s) name = arr[i][keyName];
                     ArrData.push(arr[i]);
@@ -94,7 +94,7 @@ module.exports = {
                     s = true;
                 }
             }
-            return {key: name, arr: ArrData};
+            return { key: name, arr: ArrData };
         },
         //移除数组中其它元素
         delKey(arr, keyName, key) {
@@ -109,7 +109,7 @@ module.exports = {
         //移除数组中左边的元素
         delLeft(arr, keyName, key) {
             let s = false, ArrData = [];
-            for (let i = 0; i< arr.length; i++) {
+            for (let i = 0; i < arr.length; i++) {
                 if (arr[i][keyName] === key) {
                     s = true;
                     ArrData.push(arr[i]);
@@ -122,7 +122,7 @@ module.exports = {
         //移除数组中右边的元素
         delRight(arr, keyName, key) {
             let s = true, ArrData = [];
-            for (let i = 0; i< arr.length; i++) {
+            for (let i = 0; i < arr.length; i++) {
                 if (arr[i][keyName] === key) {
                     s = false;
                     ArrData.push(arr[i]);
@@ -162,13 +162,13 @@ module.exports = {
             return arr1.some(_ => arr2.indexOf(_) > -1);
         },
         //判断下级数组是否为空
-        hasChild(arr,key = 'children') {
+        hasChild(arr, key = 'children') {
             return arr[key] && arr[key].length !== 0
         }
     },
-    //日期时间操作
+    // 日期时间操作
     isDate: {
-        new_date: new Date() ,
+        new_date: new Date(),
         year: new Date().getFullYear(),  //当前年
         month: new Date().getMonth(),    //当前月
         date: new Date().getDate(),      //当前日
@@ -179,32 +179,32 @@ module.exports = {
         },
         //获得本周的开端日期
         weekStartDate() {
-            return this.formatDate(new Date(this.year,this.month, this.date - this.day));
+            return this.formatDate(new Date(this.year, this.month, this.date - this.day));
         },
         //获得本周的停止日期
         weekEndDate() {
-            return this.formatDate(new Date(this.year,this.month, this.date + (6 - this.day)));
+            return this.formatDate(new Date(this.year, this.month, this.date + (6 - this.day)));
         },
         //获得上周的停止日期
         weekLastEndDate() {
-            return this.formatDate(new Date(this.year,this.month, this.date + (6 - this.day - 7)));
+            return this.formatDate(new Date(this.year, this.month, this.date + (6 - this.day - 7)));
         },
         //获得本月的开端日期
         monthStartDate() {
-            return this.formatDate(new Date(this.year,this.month, 1));
+            return this.formatDate(new Date(this.year, this.month, 1));
         },
         //获得本月的停止日期
         monthEndDate() {
-            return this.formatDate(new Date(this.year,this.month, this.monthDays(this.month)));
+            return this.formatDate(new Date(this.year, this.month, this.monthDays(this.month)));
         },
         //获得上月开端时候
         monthLastStartDate() {
-            return this.formatDate(new Date(this.year,this.month - 1, 1));
+            return this.formatDate(new Date(this.year, this.month - 1, 1));
         },
         //获得上月停止时候
         monthLastEndDate() {
             const day = new Date(this.year, this.month, 0).getDate();
-            return this.formatDate(new Date(this.year,this.month - 1, day));
+            return this.formatDate(new Date(this.year, this.month - 1, day));
         },
         //获取今年的开头
         currentYear() {
@@ -218,7 +218,7 @@ module.exports = {
         monthDays(month) {
             let StartDate = new Date(this.year, month, 1);
             let EndDate = new Date(this.year, month + 1, 1);
-            return (StartDate - EndDate)/(1000 * 60 * 60 * 24);
+            return (StartDate - EndDate) / (1000 * 60 * 60 * 24);
         },
         //格局化日期：yyyy-MM-dd
         formatDate(date) {
@@ -238,7 +238,7 @@ module.exports = {
             return strArr
         }
     },
-    //对象操作
+    // 对象操作
     isObj: {
         //判断一个对象是否存在key
         hasKey(obj, key) {
@@ -257,7 +257,7 @@ module.exports = {
             else return !keysArr1.some(key => obj1[key] != obj2[key])
         },
     },
-    //随机字符串操作
+    // 随机字符串操作
     isRandom: {
         NUM: '0123456789',
         XEU: 'abcdefghijklmnopqrstuvwxyz',
@@ -296,11 +296,11 @@ module.exports = {
             return this.getRandom(num, this.XEU + this.DEU);
         },
         //范围随机数
-        getRandomFrom(lower,upper) {
+        getRandomFrom(lower, upper) {
             return Math.floor(Math.random() * (upper - lower + 1) + lower);
         }
     },
-    //判断数据类型
+    // 判断数据类型
     isDataType: {
         ifNull(value) {
             return value === undefined || value === null;
@@ -326,5 +326,5 @@ module.exports = {
         ifString(value) {
             return value instanceof String || Object.prototype.toString.call(value) === '[object String]';
         }
-    },
+    }
 }

@@ -1,17 +1,17 @@
+<wxs src="./../../../../mp-common/wxs/tools.wxs" module="tools" />
 <ui-fixed bottom placeholder bg="{{bg}}" ui="{{ui}}" noFixed="{{noFixed}}" zIndex='99'>
     <view class="ui-tabbar-box">
         <view class="ui-tabbar">
-            <block wx:for="{{datas}}" wx:key="index">
-                <view class="ui-tabbar-item {{index===cur?curText:text}} {{index===cur?'cur':''}}" data-item="{{item}}" bindtap="clickItem">
+            <block wx:for="{{datas}}" data-item="{{item}}" wx:key="index">
+                <view class="ui-tabbar-item {{index===cur?curText:text}} {{index===cur?'cur':''}}" bindtap="clickItem" id="{{item.icon.indexOf('/')}}">
                     <view class="ui-tabbar-icon {{item.center?'center border shadow-' + main:''}}">
-                        <image src="{{index===cur?item.curIcon:item.icon}}" mode="aspectFill" class="ui-tabbar-image"
-                               wx:if="{{item.icon.indexOf('/') !== -1}}"/>
-                        <text class="{{index === cur?item.curIcon: item.icon}}" wx:else/>
+                        <image src="{{index===cur?item.curIcon:item.icon}}" mode="aspectFill" class="ui-tabbar-image" wx:if="{{tools.indexOf(item.icon,'/')}}" />
+                        <text class="{{index === cur?item.curIcon: item.icon}}" wx:else />
                     </view>
                     <view class="ui-tabbar-text">{{ item.title }}</view>
                 </view>
             </block>
-            <slot/>
+            <slot />
         </view>
     </view>
 </ui-fixed>

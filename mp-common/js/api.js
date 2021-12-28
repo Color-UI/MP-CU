@@ -16,17 +16,17 @@ const API_BASE_URL = ''
 const request = (url, method, data, hasCheck = false) => {
     let _url = API_BASE_URL + url
     wx.showLoading({
-        title:'请求中'
+        title: '请求中'
     })
     return new Promise((resolve, reject) => {
-        //culog(`发送网络请求，url : ${_url} ,method : ${method} , data : ${JSON.stringify(data)} token :${wx.getStorageSync('token')}`)
+        // culog(`发送网络请求，url : ${_url} ,method : ${method} , data : ${JSON.stringify(data)} token :${wx.getStorageSync('token')}`)
         wx.request({
             url: _url,
             method: method,
             data: data,
             header: {
                 "Content-Type": "application/json",
-                'token': '' //这里处理你的header 请求
+                'token': '' // 这里处理你的header 请求
             },
             timeout: 15000,
             success(request) {
@@ -34,7 +34,7 @@ const request = (url, method, data, hasCheck = false) => {
                     if (request.data.code == 200) {
                         resolve(request.data)
                     } else {
-                        //可以在这里添加你的返回错误码
+                        // 可以在这里添加你的返回错误码
                         wx.showToast({
                             icon: 'none',
                             title: `api接口发生错误了o(╥﹏╥)o`
